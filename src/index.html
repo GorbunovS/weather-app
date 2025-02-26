@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <h1>Погода</h1>
+    <select id="citySelect">
+      <option value="Moscow">Москва</option>
+      <option value="London">Лондон</option>
+      <option value="Berlin">Берлин</option>
+      <option value="Paris">Париж</option>
+      <option value="Madrid">Мадрид</option>
+    </select>
+    <button id="getWeatherBtn">Узнать погоду</button>
+    <div id="weatherResult">
+      <h2>Актуальная</h2>
+      <div id="currentWeather"></div>
+      <h2>На 3 дня вперёд</h2>
+      <div id="forecast"></div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  #app {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  select, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  #weatherResult {
+    margin-top: 20px;
+  }
+  
+  .sunny {
+    background-image: radial-gradient(circle, #ffcc66, #ff9900), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #ffcc66 10px, #ffcc66 20px);
+  }
+  
+  .cloudy {
+    background-image: radial-gradient(circle, #d3d3d3, #a9a9a9), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #d3d3d3 10px, #d3d3d3 20px);
+  }
+  
+  .rainy {
+    background-image: radial-gradient(circle, #add8e6, #0000ff), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #add8e6 10px, #add8e6 20px);
+  }
+  
+  .snowy {
+    background-image: radial-gradient(circle, #e0f7fa, #80deea), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #e0f7fa 10px, #e0f7fa 20px);
+  }
+</style>
