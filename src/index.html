@@ -20,61 +20,120 @@
     <div id="weatherResult">
       <h2>Актуальная</h2>
       <div id="currentWeather"></div>
-      <h2>На 3 дня вперёд</h2>
+      <h2>Прогноз на 3 дня</h2>
       <div id="forecast"></div>
     </div>
   </div>
 </body>
 </html>
 
-
 <style>
-    body {
+  body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    background: #f0f0f5;
   }
   
   #app {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
     backdrop-filter: blur(10px);
   }
-  
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+  }
+
   select, button {
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px 18px;
     font-size: 16px;
-  }
-  
-  button {
+    border: none;
+    border-radius: 12px;
+    background-color: #007aff;
+    color: white;
     cursor: pointer;
   }
-  
+
+  button:hover {
+    background-color: #005a8c;
+  }
+
   #weatherResult {
     margin-top: 20px;
   }
+
+  h2 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  #currentWeather {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  #forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .forecastDay {
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    width: 28%;
+  }
+
+  .forecastDay span {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .forecastDay .temperature {
+    font-size: 20px;
+    color: #ff6600;
+  }
+
+  select, button {
+    width: 100%;
+    margin-top: 10px;
+  }
   
+  /* Backgrounds for different weather states */
   .sunny {
-    background-image: radial-gradient(circle, #ffcc66, #ff9900), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #ffcc66 10px, #ffcc66 20px);
+    background-color: #ffcc66;
   }
-  
+
   .cloudy {
-    background-image: radial-gradient(circle, #d3d3d3, #a9a9a9), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #d3d3d3 10px, #d3d3d3 20px);
+    background-color: #d3d3d3;
   }
-  
+
   .rainy {
-    background-image: radial-gradient(circle, #add8e6, #0000ff), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #add8e6 10px, #add8e6 20px);
+    background-color: #4682b4;
   }
-  
+
   .snowy {
-    background-image: radial-gradient(circle, #e0f7fa, #80deea), repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 10px, #e0f7fa 10px, #e0f7fa 20px);
+    background-color: #b0e0e6;
   }
 </style>
+пш
